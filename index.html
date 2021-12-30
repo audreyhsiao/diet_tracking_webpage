@@ -2,15 +2,15 @@
 <html>
 
 <head>
-    <link href="assets/css/style.css" rel="stylesheet" media="all">
+    <link href="style.css" rel="stylesheet">
     <!--using vue framework-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 
 <body>
-   <div id="header-menu"  >
+   <div id="header-menu" class=" bg-gray-200 h-16"  >
        <ul  >
-           <li class="inline ">logo</li>
+           <li class="inline "><logo</li>
            <li class="inline ">首页</li>
            <li class="inline ">膳食</li>
            <li class="inline ">远动</li>
@@ -18,18 +18,19 @@
            <li class="inline ">关于我们</li>
        </ul>
    </div>
-   <div id="profile-photo"><img></div>
-   <div id="today-record"></div>
-   <div id="quote-card"></div>
-   <div id="personal-colum">
+   <div id="app" class="flex px-24 py-12">
+   <div id="profile-photo" class="border-black border h-24 w-24"><img src="assets/img/webElement/default_profile_photo.png" class="h-24 w-24 rounded-full"></div>
+   <div id="today-record" class="border-black border"></div>
+   <div id="quote-card" class=" border-black border"></div>
+   <div id="personal-colum" class="border-black border">
        <div id="personal-info"></div>
        <div id="personal-goal"></div>
    </div>
-   <div id="history-weight">
+   <div id="history-weight" class=" border-black border">
        <p>历史体重变化趋势</p>
        <img>
    </div>
-   <div id="today-cal">
+   <div id="today-cal" class=" border-black border">
     <p>今日卡路里计算</p>
     <img>
    </div>
@@ -40,7 +41,7 @@
    </div>
 
 
-    
+           </div>
 </body>
 
 </html>
