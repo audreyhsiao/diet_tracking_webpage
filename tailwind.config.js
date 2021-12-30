@@ -3,8 +3,13 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
-  },
+
+    height: {
+      144: '144px',
+      256: '256px',
+     }
+   }
+  ,
   variants: {
     extend: {},
   },
