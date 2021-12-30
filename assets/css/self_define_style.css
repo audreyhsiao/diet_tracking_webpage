@@ -4,9 +4,10 @@
 @tailwind utilities;
 
 
+
 #left-column{
     width:30%;
-    background-color:bisque;
+    background-color:#FAEDC6;
 }
 
 
@@ -21,7 +22,8 @@ header{
     justify-content: space-between;
     transition: 0.6s;
     z-index: 2;
-    background-color:#FAEDC6;
+    background-color: #3e817e;
+    color:#fff7dd;
     
   }
 
@@ -54,5 +56,12 @@ header{
     color:#555;
     border:1px solid;
     border-color:#aaa;
-    background-color:#FAEDC6;  
+    
   }
+
+
+.heading{
+      margin: 10px;
+      font-size: 24px;
+      color: #fff7dd;
+  } 

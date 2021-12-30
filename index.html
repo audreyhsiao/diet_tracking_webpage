@@ -7,12 +7,12 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 
-<body>
+<body style="background-color: #fabb51;">
     <header>
-        <ul>
-            <li class="inline m-1"><a><img class="h-14 w-14" src="assets/img/webElement/logo.png">首页</a></li>
+        <ul >
+            <li class="inline m-1"><a href="index.html"><img class="h-14 w-14" src="assets/img/webElement/logo.png">首页</a></li>
             <li class="inline "><a><img class="h-10 w-10 m-3 " src="assets/img/webElement/food_info.png">膳食</a></li>
-            <li class="inline "><a><img class="h-10 w-10 m-3" src="assets/img/webElement/exercise.png">远动</a></li>
+            <li class="inline "><a href="exercise.html"><img class="h-10 w-10 m-3" src="assets/img/webElement/exercise.png">远动</a></li>
             <li class="inline "><a><img class="h-10 w-10 m-3" src="assets/img/webElement/personal_page.png">设置</a></li>
             <li class="inline "><a><img class="h-10 w-10 m-3">关于我们</li>
 
@@ -22,7 +22,7 @@
     <div id="app" class="flex mx-36 my-12 flex-wrap">
 
         <div id="left-column" class="mt-24">
-            <div id="profile-photo" class="border-black border h-24 w-24"><img
+            <div id="profile-photo" class="border-black border h-24 w-24 items-center"><img
                     src="assets/img/webElement/default_profile_photo.png" class="h-24 w-24 rounded-full"></div>
 
             <div id="quote-card" class="my-5 border-black border h-108">
@@ -51,7 +51,7 @@
                             }
                         })
                     </script>
-                    
+
                 </div>
                 <div id="personal-goal" class="h-96 border-black border">个人目标</div>
                 <button>修改个人目标</button>
@@ -61,23 +61,54 @@
         <div id="right-colmn" class="flex flex-wrap ml-12 mt-24">
 
 
-            <div id="today-record" class="border-black border w-full mb-5">
-                今日卡路里记录
+            <div id="today-record" class="border-black border w-full mb-5 bg-green2 ">
+                <p class="heading">今日卡路里记录</p>
+                <div class="flex-wrap flex">
+
+                <div class="height-3/4 m-5">
+                    <ul >
+                     <li class="inline">早餐</li>
+                    <li class="inline">午餐</li>
+                </ul>
+
+                <div class=" bg-green1 my-2">
+                <div class="h-48 border-4 border-green2 ">
+                    <p class="m-2 text-lg">已登记信息</p>
+                    <ul>
+                        <li class="m-2">苹果 1个</li>
+                        <li class="m-2">牛奶 200ml</li>
+                    </ul>
+                </div>
+                <div class="h-24 m-2 text-lg">当前卡路里信息</div>
+                </div>
+               
+                <div class="m-5">
+                <div>饼图</div>
+                <div>膳食配比</div>
+                <div>总卡路里报告</div>
+
+                </div>
+                </div>
+                
+                
+            </div></div>
+            <div id="history-weight" class=" border-black border w-full mb-5 bg-green2">
+                <p class="heading">历史体重变化趋势</p>
                 <img class="h-24 ">
             </div>
-            <div id="history-weight" class=" border-black border w-full mb-5">
-                <p>历史体重变化趋势</p>
+            <div id="today-cal" class=" border-black border w-full mb-5 bg-green2">
+                <p class="heading">今日卡路里计算</p>
                 <img class="h-24 ">
-            </div>
-            <div id="today-cal" class=" border-black border w-full mb-5">
-                <p>今日卡路里计算</p>
-                <img class="h-24 w-96">
             </div>
         </div>
 
-        <div id="journal" class="w-full  mt-8">
-            <div>日誌記錄 <button>寫</button></div>
-            <div>過往紀錄</div>
+        <div id="journal" class="w-full mt-8 border border-black bg-green1">
+            <div ><span class="heading">日誌記錄</span> <button>寫</button></div>
+            <div class="mx-12">過往紀錄
+                <div class="bg-pink-900 h-32 w-48 rounded-full text-center m-3 ">card 1</div>
+                <div class="bg-pink-900 h-32 w-48 rounded-full text-center m-3">card 1</div>
+                
+            </div>
             <div>過往日誌心情統計</div>
         </div>
 
