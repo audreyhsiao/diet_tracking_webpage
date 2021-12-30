@@ -1,0 +1,58 @@
+/* ./your-css-folder/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#left-column{
+    width:30%;
+    background-color:bisque;
+}
+
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    height:10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+    z-index: 2;
+    background-color:#FAEDC6;
+    
+  }
+
+  header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header ul li{
+    position: relative;
+    list-style: none;
+  }
+  
+  header ul li a{
+    position: relative;
+    margin: 0 2px;
+    color: #000;
+    font-weight: 12px;
+    transition: 0.5s;
+  }
+  
+
+  header.sticky ul li a{
+    color: #000;
+  }
+
+ header.sticky ul li input{
+    color:#555;
+    border:1px solid;
+    border-color:#aaa;
+    background-color:#FAEDC6;  
+  }

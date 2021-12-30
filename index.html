@@ -8,40 +8,51 @@
 </head>
 
 <body>
-   <div id="header-menu" class=" bg-gray-200 h-16"  >
-       <ul  >
-           <li class="inline "><logo</li>
-           <li class="inline ">首页</li>
-           <li class="inline ">膳食</li>
-           <li class="inline ">远动</li>
-           <li class="inline ">设置</li>
-           <li class="inline ">关于我们</li>
-       </ul>
-   </div>
-   <div id="app" class="flex px-24 py-12">
-   <div id="profile-photo" class="border-black border h-24 w-24"><img src="assets/img/webElement/default_profile_photo.png" class="h-24 w-24 rounded-full"></div>
-   <div id="today-record" class="border-black border"></div>
-   <div id="quote-card" class=" border-black border"></div>
-   <div id="personal-colum" class="border-black border">
-       <div id="personal-info"></div>
-       <div id="personal-goal"></div>
-   </div>
-   <div id="history-weight" class=" border-black border">
-       <p>历史体重变化趋势</p>
-       <img>
-   </div>
-   <div id="today-cal" class=" border-black border">
-    <p>今日卡路里计算</p>
-    <img>
-   </div>
-   <div id="journal">
-       <div>日誌記錄 <button>寫</button></div>
-       <div>過往紀錄</div>
-       <div>過往日誌心情統計</div>
-   </div>
+    <header>
+   
+        <ul> 
+            <li class="inline m-1"><a><img class="h-14 w-14" src="assets/img/webElement/logo.png">首页</a></li>
+            <li class="inline "><a><img class="h-10 w-10 m-3" src="assets/img/webElement/food_info.png">膳食</a></li>
+            <li class="inline "><a><img class="h-10 w-10 m-3" src="assets/img/webElement/exercise.png">远动</a></li>
+            <li class="inline "><a><img class="h-10 w-10 m-3" src="assets/img/webElement/personal_page.png">设置</a></li>
+            <li class="inline "><a><img class="h-10 w-10 m-3" >关于我们</li>
+        </ul>
+  
+    </header>
+    <div id="app" class="flex px-24 py-12">
+        <div id="left-column">
+            <div id="profile-photo" class="border-black border h-24 w-24"><img
+                    src="assets/img/webElement/default_profile_photo.png" class="h-24 w-24 rounded-full"></div>
+
+            <div id="quote-card" class=" border-black border">
+                <p>你已经坚持使用绿森羚OO天啦</p>
+                <p>你今天的卡路里消耗超过OO%的用户~</p>
+            </div>
+            <div id="personal-colum" class="border-black border">
+                <div id="personal-info"></div>
+                <div id="personal-goal"></div>
+            </div>
+        </div>
+        <div id="right-colmn">
+        <div id="today-record" class="border-black border">今日卡路里记录</div>
+        <div id="history-weight" class=" border-black border">
+            <p>历史体重变化趋势</p>
+            <img>
+        </div>
+        <div id="today-cal" class=" border-black border">
+            <p>今日卡路里计算</p>
+            <img>
+        </div>
+        </div>
+
+        <div id="journal">
+            <div>日誌記錄 <button>寫</button></div>
+            <div>過往紀錄</div>
+            <div>過往日誌心情統計</div>
+        </div>
 
 
-           </div>
+    </div>
 </body>
 
 </html>
