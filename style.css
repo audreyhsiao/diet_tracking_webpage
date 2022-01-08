@@ -32171,6 +32171,8 @@ video {
 #left-column{
   width:30%;
   background-color:#FAEDC6;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
 }
 
 header{
@@ -32184,8 +32186,10 @@ header{
   justify-content: space-between;
   transition: 0.6s;
   z-index: 2;
-  background-color: #3e817e;
+  background: linear-gradient(to right, #3e817e, #134e4b);
   color:#fff7dd;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
 }
 
 header ul{
