@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="login_style.css">
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <div style="margin:10px">
+                <h1>登录</h1></div>
+                <span>使用用户名或手机号登录</span>
+                <input type="userId" placeholder="用户名/手机号" />
+                <input type="password" placeholder="Password" />
+                <a href="#">忘记密码</a>
+                <button>登录</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <img src="assets/img/webElement/logo.png" style="width: 25%; height:15%; margin:10px">
+                    <h1>欢迎来到绿森羚</h1>
+                    <p>还没有账号？<br />
+                        赶紧我们一起开始你的健康之路</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+
+
+</html>
