@@ -11,20 +11,22 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         var cardArray = document.getElementsByClassName('foodCard');
-       
+
         var CardIndex = 0;
 
         function changeDisplay(n) {
-            
+
             for (i = 0; i < cardArray.length; i++)
                 cardArray[i].style.display = "none";
+            cardArray[n].style.backgroundColor = "#3e817e";
             cardArray[n].style.display = "inline";
+            cardArray[n].style.backgroundColor = "#3e817e";
         }
 
         $(function () {
             function defaultDisplay() {
                 for (i = 1; i < cardArray.length; i++)
-                cardArray[i].style.display = "none";
+                    cardArray[i].style.display = "none";
             }
             defaultDisplay();
         });
@@ -52,21 +54,24 @@
 
     <div id="app" class="flex mx-36 my-12 flex-wrap">
 
-        <div id="left-column" class="mt-24 rounded-md">
-            <div id="profile-photo" class="border-black border h-24 w-24 items-center"><img
-                    src="assets/img/webElement/default_profile_photo.png" class="h-24 w-24 rounded-full"></div>
+        <div id="left-column" class="absolute mt-24 rounded-md" style="height:950px; width:350px;">
+            <div id="profile-photo" class=" h-24 w-24 absolute" style="left:115px; top:50px;">
+                <img src="assets/img/webElement/default_profile_photo.png" class="h-24 w-24 rounded-full">
+            </div>
+            <p class="absolute" style="left:110px;top:160px; font-weight:300; font-size:24px;">不瘦不改名⚡</p>
 
-            <div id="quote-card" class="my-5 border-black border h-108">
+            <div id="quote-card" class=" absolute my-5 shadow-lg bg-white rounded-md" style="left:15px; top:196px;">
                 <p class="m-5">你已经坚持使用绿森羚OO天啦</p>
                 <p class="m-5">你今天的卡路里消耗超过OO%的用户~</p>
             </div>
-            <div id="personal-column" class="border-black border ">
+            <div id="personal-column" class="absolute bg-white rounded-md shadow-lg" style="left:15px; top:380px;">
                 <div id="personal-info" class="h-96 border-black border">个人信息
-                    <ol>
-                        <li v-for="info in infos">
-                            {{ todo.text }}
-                        </li>
-                    </ol>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
 
 
 
@@ -79,47 +84,49 @@
         <div id="right-column" class="flex flex-wrap ml-12 mt-24">
 
 
-            <div id="today-record" class="border-black border w-144 mb-5 bg-green2 rounded-md">
-                <p class="heading">今日卡路里记录</p>
+            <div id="today-record" class="border-black border w-144 mb-5 absolute rounded-md shadow-lg"
+                style="left:550px; bottom:190px; width:690px;">
+                <p class=" text-green-900">今日卡路里记录</p>
                 <div class="flex-wrap flex">
 
-                    <div class="height-3/4 m-5">
-                        
-                        <button class="inline" onclick='changeDisplay(0)'>早餐</button>
-                        <button class="inline" onclick='changeDisplay(1)'>午餐</button>
-                        <button class="inline" onclick='changeDisplay(2)'>晚餐</button>
-                        <button class="inline" onclick='changeDisplay(3)'>加餐</button>
+                    <div class="height-3/4 m-5 flex">
+                        <div class="inline">
+                            <button class="inline bg-green1 p-2 rounded-md" onclick='changeDisplay(0)'>早餐</button>
+                            <button class="inline bg-green2 p-2 rounded-md z-10" onclick='changeDisplay(1)'>午餐</button>
+                            <button class="inline bg-green2 p-2 rounded-md z-10" onclick='changeDisplay(2)'>晚餐</button>
+                            <button class="inline bg-green2 p-2 rounded-md z-10" onclick='changeDisplay(3)'>加餐</button>
 
 
-                        <div class=" bg-green1 my-2">
+                            <div class=" bg-green1 -mt-2 w-fit p-5 rounded-sm" style="height:250px; width:300px;">
 
-                            <div class="h-48 border-4 border-green2 ">
-                                <p class="m-2 text-lg">已登记信息</p>
-                                <ul class="foodCard">
-                                    <li class="m-2">水煮蛋 一颗 70cal</li>
-                                    <li class="m-2">牛奶 200ml 106cal</li>
-                                    <li class="m-2">苹果 一个 199cal</li>
-                                    <li>卡路里摄入 315</li>
-                                </ul>
-                                <ul class="foodCard">
-                                    <li class="m-2">三文鱼 400g 632cal</li>
-                                    <li class="m-2">牛奶 200ml 106cal</li>
-                                    <li class="m-2">苹果 一个 199cal</li>
-                                    <li>卡路里摄入 315</li>
-                                </ul>
-                                <ul class="foodCard">
-                                    <li class="m-2">水煮蛋 一颗 70cal</li>
-                                    <li class="m-2">牛奶 200ml 106cal</li>
-                                    <li class="m-2">苹果 一个 199cal</li>
-                                    <li>卡路里摄入 315</li>
-                                </ul>
+                                <div class=" ">
+
+                                    <ul class="foodCard">
+                                        <li class="m-2">水煮蛋 一颗 70cal</li>
+                                        <li class="m-2">牛奶 200ml 106cal</li>
+                                        <li class="m-2">苹果 一个 199cal</li>
+                                        <li>卡路里摄入 315</li>
+                                    </ul>
+                                    <ul class="foodCard">
+                                        <li class="m-2">三文鱼 400g 632cal</li>
+                                        <li class="m-2">米饭 200g 232cal</li>
+                                        <li class="m-2">西兰花 200g 54cal</li>
+                                        <li>卡路里摄入 918</li>
+                                    </ul>
+                                    <ul class="foodCard">
+                                        <li class="m-2">全麦面包 300g 762cal</li>
+                                        <li class="m-2">胡萝卜 100g 32cal</li>
+                                        <li>卡路里摄入 794</li>
+                                    </ul>
+
+                                </div>
 
                             </div>
                             <div class="h-24 m-2 text-lg">当前卡路里信息 2505</div>
                         </div>
 
-                        <div class="m-5">
-                            <div>饼图</div>
+                        <div class="m-5 inline">
+
                             <div>膳食配比
                                 <canvas id="nutrition" class="bg-yellow-100"></canvas>
                                 <script>const nutritionC = document.getElementById('nutrition').getContext('2d');
@@ -143,7 +150,7 @@
                                         options: {}
                                     });</script>
                             </div>
-                            <div>总卡路里报告</div>
+
 
                         </div>
                     </div>
@@ -151,10 +158,11 @@
 
                 </div>
             </div>
-            <div id="history-weight" class=" border-black border w-fit mb-5 bg-green2 rounded-md">
+            <div id="history-weight" class=" border-black border w-fit mb-5 bg-green2 rounded-md absolute"
+                style="left:550px;bottom:-120px; width:690px;height:300px">
                 <p class="heading">历史体重变化趋势</p>
-                <div class="max-h-96 w-144">
-                    <canvas id="history_week" class="bg-beige rounded-sm  m-5" width="500" height="350"></canvas>
+                <div class="">
+                    <canvas id="history_week" class="bg-beige rounded-sm  m-5" width="500" height="200"></canvas>
                     <script>
                         const history_week = document.getElementById('history_week');
                         const weightChart1 = new Chart(history_week, {
@@ -206,10 +214,11 @@
 
 
             </div>
-            <div id="today-cal" class=" border-black border w-fit mb-5 bg-green2 rounded-md">
+            <div id="today-cal" class=" border-black border w-fit mb-5 bg-green2 rounded-md absolute"
+                style="left:550px;bottom:-440px;height:300px;width:690px;">
                 <p class="heading">今日卡路里计算</p>
                 <div class="max-h-96 w-144">
-                    <canvas id="todayChart" class="bg-beige rounded-sm  m-5" width="500" height="350"></canvas>
+                    <canvas id="todayChart" class="bg-beige rounded-sm  m-5" width="100" height="50"></canvas>
 
                     <script>
                         const today_cal = document.getElementById('todayChart').getContext('2d');
@@ -235,8 +244,9 @@
             </div>
         </div>
 
-        <div id="journal" class="w-full mt-8 border border-black bg-green1 rounded-md">
-            <div><span class="heading">日誌記錄</span> <button>寫</button></div>
+        <div id="journal" class="w-full mt-8 border border-black bg-green1 absolute rounded-md"
+            style="left:120px;bottom:-1000px; width:1000px;">
+            <div><span class="heading ">日誌記錄</span> <button>寫</button></div>
             <div class="mx-12 ">過往紀錄
                 <div class="bg-beige h-32 w-48 rounded-full text-center m-3 ">
                     <h3>2021/11/14</h3>
@@ -247,44 +257,46 @@
 
             </div>
             <div>過往日誌心情統計</div>
-            <canvas id="emoChart" class="bg-beige" width="400" height="400"></canvas>
-            <script>
-                const emo = document.getElementById('emoChart');
-                const emoChart = new Chart(emo, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                        datasets: [{
-                            label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.5)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
+            <div style="width:400px;">
+                <canvas id="emoChart" class="bg-beige" width="400" height="400"></canvas>
+                <script>
+                    const emo = document.getElementById('emoChart');
+                    const emoChart = new Chart(emo, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [12, 19, 3, 5, 2, 3],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.5)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
                             }
                         }
-                    }
-                });
-            </script>
+                    });
+                </script>
+            </div>
         </div>
 
 
