@@ -66,7 +66,7 @@
             </div>
             <div id="personal-column" class="absolute " style="left:15px; top:350px;width:310px;">
                 <div id="personal-info" class="bg-white rounded-md shadow-lg py-2">
-                   <div class="mx-28 my-5 w-full tracking-wider text-xl font-light">个人信息</div>
+                    <div class="mx-28 my-5 w-full tracking-wider text-xl font-light">个人信息</div>
                     <ul class="m-5">
                         <li>性別：男</li>
                         <li>年龄：21岁</li>
@@ -75,7 +75,8 @@
                         <li>体重：95kg</li>
                         <li>BMI：30.671</li>
                         <li>地区：北京</li>
-                        <li>签名：<span class="tracking-wider" style="color: #fabb51;font-weight: 700;font-style: italic;">我要瘦成一道闪电！！！</span></li>
+                        <li>签名：<span class="tracking-wider"
+                                style="color: #fabb51;font-weight: 700;font-style: italic;">我要瘦成一道闪电！！！</span></li>
                     </ul>
                 </div>
                 <div id="personal-goal" class="bg-white rounded-md shadow-lg py-2 my-4">
@@ -84,9 +85,9 @@
                         <li> 体重:75kg</li>
                         <li>每日卡路里摄取：1600卡</li>
                         <li>每天运动：1.5h</li>
-             
+
                     </ul>
-                 
+
                 </div>
                 <button class=" ml-16 text-sm mt-2 inline hover:text-green-800">修改个人信息</button>
                 <button class="ml-4 text-sm inline hover:text-green-800">修改个人目标</button>
@@ -117,18 +118,21 @@
                                         <li class="m-2">水煮蛋 一颗 70cal</li>
                                         <li class="m-2">牛奶 200ml 106cal</li>
                                         <li class="m-2">苹果 一个 199cal</li>
-                                        <li class="absolute tracking-wider text-xl text-green-800" style="bottom:115px;">卡路里摄入 315cal</li>
+                                        <li class="absolute tracking-wider text-xl text-green-800"
+                                            style="bottom:115px;">卡路里摄入 315cal</li>
                                     </ul>
                                     <ul class="foodCard">
                                         <li class="m-2">三文鱼 400g 632cal</li>
                                         <li class="m-2">米饭 200g 232cal</li>
                                         <li class="m-2">西兰花 200g 54cal</li>
-                                        <li class="absolute tracking-wider text-xl text-green-800" style="bottom:115px;">卡路里摄入 918cal</li>
+                                        <li class="absolute tracking-wider text-xl text-green-800"
+                                            style="bottom:115px;">卡路里摄入 918cal</li>
                                     </ul>
                                     <ul class="foodCard">
                                         <li class="m-2">全麦面包 300g 762cal</li>
                                         <li class="m-2">胡萝卜 100g 32cal</li>
-                                        <li class="absolute tracking-wider text-xl text-green-800" style="bottom:115px;">卡路里摄入 794cal</li>
+                                        <li class="absolute tracking-wider text-xl text-green-800"
+                                            style="bottom:115px;">卡路里摄入 794cal</li>
                                     </ul>
 
                                 </div>
@@ -141,7 +145,7 @@
 
                             <div>
                                 <p class="text-lg text-green2 mb-2">膳食配比</p>
-                                <canvas id="nutrition" ></canvas>
+                                <canvas id="nutrition"></canvas>
                                 <script>const nutritionC = document.getElementById('nutrition').getContext('2d');
 
                                     const nutrition = new Chart(nutritionC, {
@@ -240,7 +244,7 @@
                             data: {
 
                                 datasets: [{
-                                    data: [1605, 1302,1403,2037,1398],
+                                    data: [1605, 1302, 1403, 2037, 1398],
                                     backgroundColor: [
                                         'rgb(255, 187, 81)',
                                         'rgb(255, 0, 0)',
@@ -258,19 +262,44 @@
             </div>
         </div>
 
-        <div id="journal" class="w-full mt-8 border border-black bg-green1 absolute rounded-md"
-            style="left:120px;bottom:-1000px; width:1000px;">
-            <div><span class="heading ">日誌記錄</span> <button>寫</button></div>
-            <div class="mx-12 ">過往紀錄
-                <div class="bg-beige h-32 w-48 rounded-full text-center m-3 ">
-                    <h3>2021/11/14</h3>
-                    <hr />
-                    card 1
+        <div id="journal" class="w-full mt-8 shadow-xl bg-beige absolute rounded-md"
+            style="left:120px;bottom:-980px; width:1140px;height:600px;">
+            <div>
+                <p class="text-2xl mt-5">日誌記錄</p>
+                <button class="">寫</button>
+            </div>
+            <div class="mx-12 inline-flex">
+                <div class="bg-white h-32 w-48 rounded-lg shadow-xl text-center m-3">
+                    <h3>2021/12/20</h3>
+                    <hr class="mx-2" />
+                    <p class="m-5 text-sm ">今天没忍住吃了汉堡，啊！上天惩罚我吧，我再也不吃汉堡了！
+                    </p>
                 </div>
-                <div class="bg-pink-900 h-32 w-48 rounded-full text-center m-3">card 1</div>
+
+                <div class="bg-white h-32 w-48 rounded-lg shadow-xl text-center m-3 ">
+                    <h3 >2021/12/23</h3>
+                    <hr class="mx-2" />
+                    <p class="m-5 text-sm ">已经坚持锻炼一星期多了！我可以的！
+                    </p>
+                </div>
+
+                <div class="bg-white h-32 w-48 rounded-lg shadow-xl text-center m-3 ">
+                    <h3>2021/12/27</h3>
+                    <hr class="mx-2" />
+                    <p class="m-5 text-sm ">天天都吃西兰花，我腻了
+                    </p>
+                </div>
+
+                <div class="bg-white h-32 w-48 rounded-lg shadow-xl text-center m-3 ">
+                    <h3 class="">2021/12/31</h3>
+                    <hr class="mx-2" />
+                    <p class="m-5 text-sm ">怎么还没瘦到75啊
+                    </p>
+                </div>
+
 
             </div>
-            <div>過往日誌心情統計</div>
+            <div class="ml-4">过往日志心情统计</div>
             <div style="width:400px;">
                 <canvas id="emoChart" class="bg-beige" width="400" height="400"></canvas>
                 <script>
@@ -280,8 +309,8 @@
                         data: {
                             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                             datasets: [{
-                                label: '# of Votes',
-                                data: [12, 19, 3, 5, 2, 3],
+                                label: '过往日志心情统计',
+                                data: [12, 15, 3, 5, 7],
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.5)',
                                     'rgba(54, 162, 235, 0.2)',
