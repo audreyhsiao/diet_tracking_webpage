@@ -156,9 +156,9 @@
 
                                                 data: [50, 13, 37],
                                                 backgroundColor: [
-                                                    'rgb(255, 187, 81)',
-                                                    'rgb(255, 145, 0)',
-                                                    'rgb(0, 15, 87)',
+                                                    'rgb(250, 187, 81)',
+                                                    'rgb(62, 142, 126)',
+                                                    'rgba(160,209,150)',
                                                 ],
                                                 hoverOffset: 4
                                             }]
@@ -175,7 +175,7 @@
 
                 </div>
             </div>
-            <div id="history-weight" class=" shadow-lg w-fit mb-5 bg-green2 rounded-md absolute"
+            <div id="history-weight" class=" shadow-lg w-fit mb-5 bg-green1 rounded-md absolute"
                 style="left:550px;bottom:-100px; width:690px;height:250px">
                 <p class="heading">历史体重变化趋势</p>
                 <div class="">
@@ -231,7 +231,7 @@
 
 
             </div>
-            <div id="today-cal" class=" shadow-lg w-fit mb-5 bg-green2 rounded-md absolute"
+            <div id="today-cal" class=" shadow-lg w-fit mb-5 bg-green1 rounded-md absolute"
                 style="left:550px;bottom:-370px;height:250px;width:690px;">
                 <p class="heading">今日卡路里计算</p>
                 <div class="">
@@ -264,9 +264,9 @@
 
         <div id="journal" class="w-full mt-8 shadow-xl bg-beige absolute rounded-md"
             style="left:120px;bottom:-980px; width:1140px;height:600px;">
-            <div>
-                <p class="text-2xl mt-5">日誌記錄</p>
-                <button class="">寫</button>
+            <div class="">
+                <p class="ml-10 heading tracking-widest">日誌記錄</p>
+               <!-- <a href="#" class="float-right"><img src="assets/img/webElement/writing.png" class="h-10 w-10 mr-5" /></a>-->
             </div>
             <div class="mx-12 inline-flex">
                 <div class="bg-white h-32 w-48 rounded-lg shadow-xl text-center m-3">
@@ -277,7 +277,7 @@
                 </div>
 
                 <div class="bg-white h-32 w-48 rounded-lg shadow-xl text-center m-3 ">
-                    <h3 >2021/12/23</h3>
+                    <h3>2021/12/23</h3>
                     <hr class="mx-2" />
                     <p class="m-5 text-sm ">已经坚持锻炼一星期多了！我可以的！
                     </p>
@@ -297,11 +297,18 @@
                     </p>
                 </div>
 
+                <div class=" h-32 w-48 rounded-lg shadow-xl text-center m-3 ">
+                    <h3 class="">2021/12/31</h3>
+                    <hr class="mx-2" />
+                    <p class="m-5 text-sm ">新日記
+                    </p>
+                </div>
+
 
             </div>
-            <div class="ml-4">过往日志心情统计</div>
-            <div style="width:400px;">
-                <canvas id="emoChart" class="bg-beige" width="400" height="400"></canvas>
+            <div class="ml-4 heading">过往日志心情统计</div>
+            <div style="width:600px;">
+                <canvas id="emoChart" class="bg-white ml-20 mt-10 m-5 p-5" width="510" height="300"></canvas>
                 <script>
                     const emo = document.getElementById('emoChart');
                     const emoChart = new Chart(emo, {
@@ -312,20 +319,19 @@
                                 label: '过往日志心情统计',
                                 data: [12, 15, 3, 5, 7],
                                 backgroundColor: [
-                                    'rgba(255, 99, 132, 0.5)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
+                                    'rgba(62,142,126)',
+                                    'rgba(160,209,150)',
+                                    'rgba(250,187,81)',
+                                    'rgba(250,237,198)',
+                                    'rgba(0, 0, 0)',
+
                                 ],
                                 borderColor: [
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
+                                    'rgba(62,142,126)',
+                                    'rgba(160,209,150)',
+                                    'rgba(250,187,81)',
+                                    'rgba(250,237,198)',
+                                    'rgba(0, 0, 0)',
                                 ],
                                 borderWidth: 1
                             }]

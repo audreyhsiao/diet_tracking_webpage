@@ -15591,8 +15591,7 @@ video {
 }
 
 .bg-green1 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+  background-color: rgba(160,209,150);
 }
 
 .bg-green2 {
@@ -16034,8 +16033,7 @@ video {
 }
 
 .group:hover .group-hover\:bg-green1 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+  background-color: rgba(160,209,150);
 }
 
 .group:hover .group-hover\:bg-green2 {
@@ -16477,8 +16475,7 @@ video {
 }
 
 .focus-within\:bg-green1:focus-within {
-  --tw-bg-opacity: 1;
-  background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+  background-color: rgba(160,209,150);
 }
 
 .focus-within\:bg-green2:focus-within {
@@ -16920,8 +16917,7 @@ video {
 }
 
 .hover\:bg-green1:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+  background-color: rgba(160,209,150);
 }
 
 .hover\:bg-green2:hover {
@@ -17363,8 +17359,7 @@ video {
 }
 
 .focus\:bg-green1:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+  background-color: rgba(160,209,150);
 }
 
 .focus\:bg-green2:focus {
@@ -32190,7 +32185,7 @@ header{
   justify-content: space-between;
   transition: 0.6s;
   z-index: 2;
-  background: linear-gradient(to right, #3e817e, #134e4b);
+  background: linear-gradient(to right, rgb(160,209,150), #134e4b);
   color:#fff7dd;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
@@ -32229,7 +32224,7 @@ header.sticky ul li input{
 .heading{
   margin: 10px;
   font-size: 24px;
-  color: #fff7dd;
+  color: #134e4b;
 }
 
 @media (min-width: 640px) {
@@ -47156,8 +47151,7 @@ header.sticky ul li input{
   }
 
   .sm\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .sm\:bg-green2 {
@@ -47599,8 +47593,7 @@ header.sticky ul li input{
   }
 
   .group:hover .sm\:group-hover\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .group:hover .sm\:group-hover\:bg-green2 {
@@ -48042,8 +48035,7 @@ header.sticky ul li input{
   }
 
   .sm\:focus-within\:bg-green1:focus-within {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .sm\:focus-within\:bg-green2:focus-within {
@@ -48485,8 +48477,7 @@ header.sticky ul li input{
   }
 
   .sm\:hover\:bg-green1:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .sm\:hover\:bg-green2:hover {
@@ -48928,8 +48919,7 @@ header.sticky ul li input{
   }
 
   .sm\:focus\:bg-green1:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .sm\:focus\:bg-green2:focus {
@@ -78305,8 +78295,7 @@ header.sticky ul li input{
   }
 
   .md\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .md\:bg-green2 {
@@ -78748,8 +78737,7 @@ header.sticky ul li input{
   }
 
   .group:hover .md\:group-hover\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .group:hover .md\:group-hover\:bg-green2 {
@@ -79191,8 +79179,7 @@ header.sticky ul li input{
   }
 
   .md\:focus-within\:bg-green1:focus-within {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .md\:focus-within\:bg-green2:focus-within {
@@ -79634,8 +79621,7 @@ header.sticky ul li input{
   }
 
   .md\:hover\:bg-green1:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .md\:hover\:bg-green2:hover {
@@ -80077,8 +80063,7 @@ header.sticky ul li input{
   }
 
   .md\:focus\:bg-green1:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .md\:focus\:bg-green2:focus {
@@ -109454,8 +109439,7 @@ header.sticky ul li input{
   }
 
   .lg\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .lg\:bg-green2 {
@@ -109897,8 +109881,7 @@ header.sticky ul li input{
   }
 
   .group:hover .lg\:group-hover\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .group:hover .lg\:group-hover\:bg-green2 {
@@ -110340,8 +110323,7 @@ header.sticky ul li input{
   }
 
   .lg\:focus-within\:bg-green1:focus-within {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .lg\:focus-within\:bg-green2:focus-within {
@@ -110783,8 +110765,7 @@ header.sticky ul li input{
   }
 
   .lg\:hover\:bg-green1:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .lg\:hover\:bg-green2:hover {
@@ -111226,8 +111207,7 @@ header.sticky ul li input{
   }
 
   .lg\:focus\:bg-green1:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .lg\:focus\:bg-green2:focus {
@@ -140603,8 +140583,7 @@ header.sticky ul li input{
   }
 
   .xl\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .xl\:bg-green2 {
@@ -141046,8 +141025,7 @@ header.sticky ul li input{
   }
 
   .group:hover .xl\:group-hover\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .group:hover .xl\:group-hover\:bg-green2 {
@@ -141489,8 +141467,7 @@ header.sticky ul li input{
   }
 
   .xl\:focus-within\:bg-green1:focus-within {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .xl\:focus-within\:bg-green2:focus-within {
@@ -141932,8 +141909,7 @@ header.sticky ul li input{
   }
 
   .xl\:hover\:bg-green1:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .xl\:hover\:bg-green2:hover {
@@ -142375,8 +142351,7 @@ header.sticky ul li input{
   }
 
   .xl\:focus\:bg-green1:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .xl\:focus\:bg-green2:focus {
@@ -171752,8 +171727,7 @@ header.sticky ul li input{
   }
 
   .\32xl\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .\32xl\:bg-green2 {
@@ -172195,8 +172169,7 @@ header.sticky ul li input{
   }
 
   .group:hover .\32xl\:group-hover\:bg-green1 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .group:hover .\32xl\:group-hover\:bg-green2 {
@@ -172638,8 +172611,7 @@ header.sticky ul li input{
   }
 
   .\32xl\:focus-within\:bg-green1:focus-within {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .\32xl\:focus-within\:bg-green2:focus-within {
@@ -173081,8 +173053,7 @@ header.sticky ul li input{
   }
 
   .\32xl\:hover\:bg-green1:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .\32xl\:hover\:bg-green2:hover {
@@ -173524,8 +173495,7 @@ header.sticky ul li input{
   }
 
   .\32xl\:focus\:bg-green1:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgba(124, 209, 184, var(--tw-bg-opacity));
+    background-color: rgba(160,209,150);
   }
 
   .\32xl\:focus\:bg-green2:focus {
