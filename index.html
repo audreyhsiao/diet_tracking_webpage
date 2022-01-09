@@ -3,15 +3,40 @@
 
 <head>
     <link href="style.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!--using vue framework-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
     <!--use chart.js-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var cardArray = document.getElementsByClassName('foodCard');
+       
+        var CardIndex = 0;
+
+        function changeDisplay(n) {
+            
+            for (i = 0; i < cardArray.length; i++)
+                cardArray[i].style.display = "none";
+            cardArray[n].style.display = "inline";
+        }
+
+        $(function () {
+            function defaultDisplay() {
+                for (i = 1; i < cardArray.length; i++)
+                cardArray[i].style.display = "none";
+            }
+            defaultDisplay();
+        });
+    </script>
 </head>
 
 
 <body>
+    <!--js -->
+    <script src='chart_element.js'></script>
+
+
     <header>
         <ul>
             <li class="inline m-1"><a href="index.html"><img class="h-14 w-14"
@@ -43,20 +68,7 @@
                         </li>
                     </ol>
 
-                    <script>
-                        var personal_info = new Vue({
-                            el: '#personal-info',
-                            data: {
-                                infos: [
-                                    { text: '身高' },
-                                    { text: '体重' },
-                                    { text: '生日' },
-                                    { text: '性别' },
-                                    { text: 'BMI' },
-                                ]
-                            }
-                        })
-                    </script>
+
 
                 </div>
                 <div id="personal-goal" class="h-96 border-black border">个人目标</div>
@@ -67,30 +79,70 @@
         <div id="right-column" class="flex flex-wrap ml-12 mt-24">
 
 
-            <div id="today-record" class="border-black border w-full mb-5 bg-green2 rounded-md">
+            <div id="today-record" class="border-black border w-144 mb-5 bg-green2 rounded-md">
                 <p class="heading">今日卡路里记录</p>
                 <div class="flex-wrap flex">
 
                     <div class="height-3/4 m-5">
-                        <ul>
-                            <li class="inline">早餐</li>
-                            <li class="inline">午餐</li>
-                        </ul>
+                        
+                        <button class="inline" onclick='changeDisplay(0)'>早餐</button>
+                        <button class="inline" onclick='changeDisplay(1)'>午餐</button>
+                        <button class="inline" onclick='changeDisplay(2)'>晚餐</button>
+                        <button class="inline" onclick='changeDisplay(3)'>加餐</button>
+
 
                         <div class=" bg-green1 my-2">
+
                             <div class="h-48 border-4 border-green2 ">
                                 <p class="m-2 text-lg">已登记信息</p>
-                                <ul>
-                                    <li class="m-2">苹果 1个</li>
-                                    <li class="m-2">牛奶 200ml</li>
+                                <ul class="foodCard">
+                                    <li class="m-2">水煮蛋 一颗 70cal</li>
+                                    <li class="m-2">牛奶 200ml 106cal</li>
+                                    <li class="m-2">苹果 一个 199cal</li>
+                                    <li>卡路里摄入 315</li>
                                 </ul>
+                                <ul class="foodCard">
+                                    <li class="m-2">三文鱼 400g 632cal</li>
+                                    <li class="m-2">牛奶 200ml 106cal</li>
+                                    <li class="m-2">苹果 一个 199cal</li>
+                                    <li>卡路里摄入 315</li>
+                                </ul>
+                                <ul class="foodCard">
+                                    <li class="m-2">水煮蛋 一颗 70cal</li>
+                                    <li class="m-2">牛奶 200ml 106cal</li>
+                                    <li class="m-2">苹果 一个 199cal</li>
+                                    <li>卡路里摄入 315</li>
+                                </ul>
+
                             </div>
-                            <div class="h-24 m-2 text-lg">当前卡路里信息</div>
+                            <div class="h-24 m-2 text-lg">当前卡路里信息 2505</div>
                         </div>
 
                         <div class="m-5">
                             <div>饼图</div>
-                            <div>膳食配比</div>
+                            <div>膳食配比
+                                <canvas id="nutrition" class="bg-yellow-100"></canvas>
+                                <script>const nutritionC = document.getElementById('nutrition').getContext('2d');
+
+                                    const nutrition = new Chart(nutritionC, {
+                                        type: 'doughnut',
+                                        data: {
+                                            labels: ['碳水', '脂质', '蛋白质'],
+                                            datasets: [{
+
+                                                data: [50, 13, 37],
+                                                backgroundColor: [
+                                                    'rgb(255, 187, 81)',
+                                                    'rgb(255, 145, 0)',
+                                                    'rgb(0, 15, 87)',
+                                                ],
+                                                hoverOffset: 4
+                                            }]
+
+                                        },
+                                        options: {}
+                                    });</script>
+                            </div>
                             <div>总卡路里报告</div>
 
                         </div>
@@ -99,58 +151,87 @@
 
                 </div>
             </div>
-            <div id="history-weight" class=" border-black border w-full mb-5 bg-green2 rounded-md">
+            <div id="history-weight" class=" border-black border w-fit mb-5 bg-green2 rounded-md">
                 <p class="heading">历史体重变化趋势</p>
-                <div>
-                    <canvas id="myChart" class="bg-beige rounded-sm px-5 m-5 h-min" ></canvas>
+                <div class="max-h-96 w-144">
+                    <canvas id="history_week" class="bg-beige rounded-sm  m-5" width="500" height="350"></canvas>
                     <script>
-                        const ctx = document.getElementById('myChart');
-                        const labels = [
-                            '2021/12/26',
-                            '2021/12/27',
-                            '2021/12/28',
-                            '2021/12/29',
-                            '2021/12/30',
-                            '2021/12/31',
-                            '2022/1/1'
-                        ];
-    
-                        const data = {
-                            labels: labels,
-                            datasets: [{
-                                label: '历史体重记录',
-                                yAxisID:'kg',
-                                backgroundColor: 'rgb(155, 122, 0)',
-                                borderColor: 'rgb(250,187,81)',
-                                data: [93.3,
-                                    92.9,
-                                    92.5,
-                                    93,
-                                    92.3,
-                                    92,
-                                    91.8],
-                            }]
-                        };
-    
-                        const config = {
+                        const history_week = document.getElementById('history_week');
+                        const weightChart1 = new Chart(history_week, {
                             type: 'line',
-                            data: data,
-                            options: {}
-                        };
+                            data: {
+                                labels: [
+                                    '2021/12/26',
+                                    '2021/12/27',
+                                    '2021/12/28',
+                                    '2021/12/29',
+                                    '2021/12/30',
+                                    '2021/12/31',
+                                    '2022/1/1'
+                                ],
+                                datasets: [{
+                                    label: '历史体重记录',
+
+                                    backgroundColor: 'rgb(155, 122, 0)',
+                                    borderColor: 'rgb(250,187,81)',
+                                    data: [93.3,
+                                        92.9,
+                                        92.5,
+                                        93,
+                                        92.3,
+                                        92,
+                                        91.8],
+                                }]
+                            },
+
+                            options: {
+                                responsive: true,
+                                plugins: {
+                                    tooltip: {
+                                        mode: 'index',
+                                        intersect: false
+                                    }
+                                },
+                                scales: {
+                                    y: {
+                                        min: 80,
+                                        max: 95,
+                                    },
+
+                                }
+                            }
+                        });
                     </script>
-    
-    
-                    <script>
-                        const myChart = new Chart(
-                          document.getElementById('myChart'),
-                          config
-                        );
-                      </script>  
-                  </div>
-                            </div>
-            <div id="today-cal" class=" border-black border w-full mb-5 bg-green2 rounded-md">
+                </div>
+
+
+            </div>
+            <div id="today-cal" class=" border-black border w-fit mb-5 bg-green2 rounded-md">
                 <p class="heading">今日卡路里计算</p>
-                <img class="h-24 ">
+                <div class="max-h-96 w-144">
+                    <canvas id="todayChart" class="bg-beige rounded-sm  m-5" width="500" height="350"></canvas>
+
+                    <script>
+                        const today_cal = document.getElementById('todayChart').getContext('2d');
+
+                        const todayChart = new Chart(today_cal, {
+                            type: 'doughnut',
+                            data: {
+
+                                datasets: [{
+                                    data: [1605, 900],
+                                    backgroundColor: [
+                                        'rgb(255, 187, 81)',
+                                        'rgb(255, 0, 0)',
+                                    ],
+                                    hoverOffset: 4
+                                }]
+
+                            },
+                            options: {}
+                        });
+                    </script>
+                </div>
             </div>
         </div>
 
@@ -166,6 +247,44 @@
 
             </div>
             <div>過往日誌心情統計</div>
+            <canvas id="emoChart" class="bg-beige" width="400" height="400"></canvas>
+            <script>
+                const emo = document.getElementById('emoChart');
+                const emoChart = new Chart(emo, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
         </div>
 
 
