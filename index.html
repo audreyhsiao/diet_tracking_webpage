@@ -64,29 +64,41 @@
                 <p class="m-5">你已经坚持使用绿森羚OO天啦</p>
                 <p class="m-5">你今天的卡路里消耗超过OO%的用户~</p>
             </div>
-            <div id="personal-column" class="absolute bg-white rounded-md shadow-lg" style="left:15px; top:380px;">
-                <div id="personal-info" class="h-96 border-black border">个人信息
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+            <div id="personal-column" class="absolute " style="left:15px; top:350px;width:310px;">
+                <div id="personal-info" class="bg-white rounded-md shadow-lg py-2">
+                   <div class="mx-28 my-5 w-full tracking-wider text-xl font-light">个人信息</div>
+                    <ul class="m-5">
+                        <li>性別：男</li>
+                        <li>年龄：21岁</li>
+                        <li>生日：1月1日</li>
+                        <li>身高：176cm</li>
+                        <li>体重：95kg</li>
+                        <li>BMI：30.671</li>
+                        <li>地区：北京</li>
+                        <li>签名：<span class="tracking-wider" style="color: #fabb51;font-weight: 700;font-style: italic;">我要瘦成一道闪电！！！</span></li>
                     </ul>
-
-
-
                 </div>
-                <div id="personal-goal" class="h-96 border-black border">个人目标</div>
-                <button>修改个人目标</button>
+                <div id="personal-goal" class="bg-white rounded-md shadow-lg py-2 my-4">
+                    <div class="mx-28 my-5 w-full tracking-wider text-xl font-light"> 个人目标</div>
+                    <ul class="m-5">
+                        <li> 体重:75kg</li>
+                        <li>每日卡路里摄取：1600卡</li>
+                        <li>每天运动：1.5h</li>
+             
+                    </ul>
+                 
+                </div>
+                <button class=" ml-16 text-sm mt-2 inline hover:text-green-800">修改个人信息</button>
+                <button class="ml-4 text-sm inline hover:text-green-800">修改个人目标</button>
             </div>
         </div>
 
         <div id="right-column" class="flex flex-wrap ml-12 mt-24">
 
 
-            <div id="today-record" class="border-black border w-144 mb-5 absolute rounded-md shadow-lg"
-                style="left:550px; bottom:190px; width:690px;">
-                <p class=" text-green-900">今日卡路里记录</p>
+            <div id="today-record" class="border-opacity-50 border-black  mb-5 absolute rounded-md shadow-xl"
+                style="left:550px; bottom:180px; width:690px;">
+                <span class=" text-green-900 text-2xl ml-4 mt-4">今日卡路里记录</span>
                 <div class="flex-wrap flex">
 
                     <div class="height-3/4 m-5 flex">
@@ -105,30 +117,31 @@
                                         <li class="m-2">水煮蛋 一颗 70cal</li>
                                         <li class="m-2">牛奶 200ml 106cal</li>
                                         <li class="m-2">苹果 一个 199cal</li>
-                                        <li>卡路里摄入 315</li>
+                                        <li class="absolute tracking-wider text-xl text-green-800" style="bottom:115px;">卡路里摄入 315cal</li>
                                     </ul>
                                     <ul class="foodCard">
                                         <li class="m-2">三文鱼 400g 632cal</li>
                                         <li class="m-2">米饭 200g 232cal</li>
                                         <li class="m-2">西兰花 200g 54cal</li>
-                                        <li>卡路里摄入 918</li>
+                                        <li class="absolute tracking-wider text-xl text-green-800" style="bottom:115px;">卡路里摄入 918cal</li>
                                     </ul>
                                     <ul class="foodCard">
                                         <li class="m-2">全麦面包 300g 762cal</li>
                                         <li class="m-2">胡萝卜 100g 32cal</li>
-                                        <li>卡路里摄入 794</li>
+                                        <li class="absolute tracking-wider text-xl text-green-800" style="bottom:115px;">卡路里摄入 794cal</li>
                                     </ul>
 
                                 </div>
 
                             </div>
-                            <div class="h-24 m-2 text-lg">当前卡路里信息 2505</div>
+                            <div class="mt-5 text-2xl text-green2 tracking-wider">当前卡路里摄入 2505cal</div>
                         </div>
 
                         <div class="m-5 inline">
 
-                            <div>膳食配比
-                                <canvas id="nutrition" class="bg-yellow-100"></canvas>
+                            <div>
+                                <p class="text-lg text-green2 mb-2">膳食配比</p>
+                                <canvas id="nutrition" ></canvas>
                                 <script>const nutritionC = document.getElementById('nutrition').getContext('2d');
 
                                     const nutrition = new Chart(nutritionC, {
@@ -158,11 +171,11 @@
 
                 </div>
             </div>
-            <div id="history-weight" class=" border-black border w-fit mb-5 bg-green2 rounded-md absolute"
-                style="left:550px;bottom:-120px; width:690px;height:300px">
+            <div id="history-weight" class=" shadow-lg w-fit mb-5 bg-green2 rounded-md absolute"
+                style="left:550px;bottom:-100px; width:690px;height:250px">
                 <p class="heading">历史体重变化趋势</p>
                 <div class="">
-                    <canvas id="history_week" class="bg-beige rounded-sm  m-5" width="500" height="200"></canvas>
+                    <canvas id="history_week" class="bg-beige rounded-sm  m-5" width="500" height="120"></canvas>
                     <script>
                         const history_week = document.getElementById('history_week');
                         const weightChart1 = new Chart(history_week, {
@@ -214,23 +227,24 @@
 
 
             </div>
-            <div id="today-cal" class=" border-black border w-fit mb-5 bg-green2 rounded-md absolute"
-                style="left:550px;bottom:-440px;height:300px;width:690px;">
+            <div id="today-cal" class=" shadow-lg w-fit mb-5 bg-green2 rounded-md absolute"
+                style="left:550px;bottom:-370px;height:250px;width:690px;">
                 <p class="heading">今日卡路里计算</p>
-                <div class="max-h-96 w-144">
-                    <canvas id="todayChart" class="bg-beige rounded-sm  m-5" width="100" height="50"></canvas>
-
+                <div class="">
+                    <canvas id="todayChart" class="bg-beige rounded-sm  m-5" width="500" height="120"></canvas>
                     <script>
                         const today_cal = document.getElementById('todayChart').getContext('2d');
 
                         const todayChart = new Chart(today_cal, {
-                            type: 'doughnut',
+                            type: 'bar',
                             data: {
 
                                 datasets: [{
-                                    data: [1605, 900],
+                                    data: [1605, 1302,1403,2037,1398],
                                     backgroundColor: [
                                         'rgb(255, 187, 81)',
+                                        'rgb(255, 0, 0)',
+                                        'rgb(255, 0, 0)',
                                         'rgb(255, 0, 0)',
                                     ],
                                     hoverOffset: 4

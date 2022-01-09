@@ -32171,8 +32171,12 @@ video {
 #left-column{
   width:30%;
   background-color:#FAEDC6;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 20px rgba(0,0,0,0.20), 
+			0 8px 8px rgba(0,0,0,0.18);
+}
+
+li{
+  margin-top: 4px;
 }
 
 header{
