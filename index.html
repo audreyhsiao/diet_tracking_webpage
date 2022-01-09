@@ -4,8 +4,7 @@
 <head>
     <link href="style.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!--using vue framework-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  
 
     <!--use chart.js-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -41,13 +40,20 @@
 
     <header>
         <ul>
-            <li class="inline m-1"><a href="index.html"><img class="h-14 w-14"
-                        src="assets/img/webElement/logo.png">首页</a></li>
-            <li class="inline "><a><img class="h-10 w-10 m-3 " src="assets/img/webElement/food_info.png">膳食</a></li>
-            <li class="inline "><a href="exercise.html"><img class="h-10 w-10 m-3"
-                        src="assets/img/webElement/exercise.png">远动</a></li>
-            <li class="inline "><a><img class="h-10 w-10 m-3" src="assets/img/webElement/personal_page.png">设置</a></li>
-            <li class="inline "><a><img class="h-10 w-10 m-3">关于我们</li>
+            <li class="absolute m-1" style="left:5px;">
+                <a class="text-sm text-gray-800" href="index.html">
+                <img class="-m-1 -mt-2 ml-0 ml h-16 w-16" src="assets/img/webElement/home.png" style="top:-2px;">
+                      <span class="ml-2.5 "> 首页</span></a>
+                    </li>
+            <li class=" inline" style="left:1080px; width: 54px;">
+                <a class=" "><img class="-m-1 -mt-4 ml-0 ml h-16 w-16 " src="assets/img/webElement/diet.png">
+                    <span class="text-yellow-100 ml-2.5 "> 膳食</span></a></li>
+            <li class="inline " style="left:1120px; width: 54px;">
+                <a href="exercise.html">
+                    <img class="-m-1 -mt-4 ml-0 ml h-16 w-16""
+                        src="assets/img/webElement/exercise.png"> <span class="text-yellow-100 ml-2 ">远动</span></a></li>
+            <li class="inline " style="left:1150px; width: 54px;"><a><img class="-m-1 -mt-2.5  h-16 w-16" src="assets/img/webElement/settings.png"> <span class="text-yellow-100 ml-2.5 ">设置</span></a></li>
+            <li class="inline " style="left:1190px; width: 54px;"><a><img class="-m-1 -mt-2   h-16 w-16" src="assets/img/webElement/logo.png"> <span class="text-yellow-100 ml-1 text-sm">关于我们</span></li>
 
         </ul>
     </header>
@@ -98,7 +104,7 @@
 
 
             <div id="today-record" class="border-opacity-50 border-black  mb-5 absolute rounded-md shadow-xl"
-                style="left:550px; bottom:180px; width:690px;">
+                style="left:550px; bottom:100px; width:690px;">
                 <span class=" text-green-900 text-2xl ml-4 mt-4">今日卡路里记录</span>
                 <div class="flex-wrap flex">
 
@@ -176,7 +182,7 @@
                 </div>
             </div>
             <div id="history-weight" class=" shadow-lg w-fit mb-5 bg-green1 rounded-md absolute"
-                style="left:550px;bottom:-100px; width:690px;height:250px">
+                style="left:550px;bottom:-170px; width:690px;height:250px">
                 <p class="heading">历史体重变化趋势</p>
                 <div class="">
                     <canvas id="history_week" class="bg-beige rounded-sm  m-5" width="500" height="120"></canvas>
@@ -232,8 +238,8 @@
 
             </div>
             <div id="today-cal" class=" shadow-lg w-fit mb-5 bg-green1 rounded-md absolute"
-                style="left:550px;bottom:-370px;height:250px;width:690px;">
-                <p class="heading">今日卡路里计算</p>
+                style="left:550px;bottom:-450px;height:250px;width:690px;">
+                <p class="heading inline ">今日卡路里计算</p> <span class="inline text-sm tracking-wide">显示近7天的卡路里摄取状况</span>
                 <div class="">
                     <canvas id="todayChart" class="bg-beige rounded-sm  m-5" width="500" height="120"></canvas>
                     <script>
@@ -263,10 +269,10 @@
         </div>
 
         <div id="journal" class="w-full mt-8 shadow-xl bg-beige absolute rounded-md"
-            style="left:120px;bottom:-980px; width:1140px;height:600px;">
+            style="left:120px;bottom:-1120px; width:1140px;height:600px;">
             <div class="">
                 <p class="ml-10 heading tracking-widest">日誌記錄</p>
-               <!-- <a href="#" class="float-right"><img src="assets/img/webElement/writing.png" class="h-10 w-10 mr-5" /></a>-->
+                <!-- <a href="#" class="float-right"><img src="assets/img/webElement/writing.png" class="h-10 w-10 mr-5" /></a>-->
             </div>
             <div class="mx-12 inline-flex">
                 <div class="bg-white h-32 w-48 rounded-lg shadow-xl text-center m-3">
