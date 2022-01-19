@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link href="style.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-</head>
-
-<body>
-    <header>
-        <ul>
-            <li class="absolute m-1" style="left:5px;">
-                <a class="text-sm text-gray-800" href="index.html">
+    <head><script src="search.js"></script><link href="style.css" rel="stylesheet"</head>
+    <!--HEADER-->
+    <body>
+        <header>
+            <ul>
+                <li class="absolute m-1" style="left:5px;">
+                    <a class="text-sm text-gray-800" href="index.html">
                     <img class="-m-1 -mt-2 ml-0 ml h-16 w-16" src="assets/img/webElement/home.png" style="top:-2px;">
-                    <span class="ml-2.5 "> 首页</span></a>
-            </li>
-            <li class=" inline" style="left:1080px; width: 54px;">
-                <a  href="recipe_search.html"><img class="-m-1 -mt-4 ml-0 ml h-16 w-16 " src="assets/img/webElement/diet.png">
-                    <span class="text-yellow-100 ml-2.5 "> 膳食</span></a>
-            </li>
-            <!--<div class="bg-beige rounded-md absolute" style="top:300px;">
-                <ul>
-                    <a><li>健康菜谱搜索</li></a>
-                    <li>热量查询</li>
-                </ul>
-            </div>-->
-
-
-            <li class="inline " style="left:1120px; width: 54px;">
-                <a href="exercise.html">
-                    <img class="-m-1 -mt-4 ml-0 ml h-16 w-16""
-                    src=" assets/img/webElement/exercise.png"> <span class="text-yellow-100 ml-2 ">远动</span></a>
-            </li>
-            <li class="inline " style="left:1150px; width: 54px;"><a><img class="-m-1 -mt-2.5  h-16 w-16"
-                        src="assets/img/webElement/settings.png"> <span class="text-yellow-100 ml-2.5 ">设置</span></a>
-            </li>
-            <li class="inline " style="left:1190px; width: 54px;"><a><img class="-m-1 -mt-2   h-16 w-16"
-                        src="assets/img/webElement/logo.png"> <span class="text-yellow-100 ml-1 text-sm">关于我们</span>
-            </li>
-
-        </ul>
-    </header>
-
-    <div>
-        <input type="text" placeholder="12分钟HIIT" />
-        <button class="bg-green2 rounded-sm">搜索</button>
-    </div>
-</body>
+                          <span class="ml-2.5 "> 首页</span></a>
+                        </li>
+                <li class=" inline" style="left:1080px; width: 54px;">
+                    <a class=" " href="recipe_search.html"><img class="-m-1 -mt-4 ml-0 ml h-16 w-16 " src="assets/img/webElement/diet.png">
+                        <span class="text-yellow-100 ml-2.5 "> 膳食</span></a></li>
+                <li class="inline " style="left:1120px; width: 54px;">
+                    <a href="exercise.html">
+                        <img class="-m-1 -mt-4 ml-0 ml h-16 w-16""
+                            src="assets/img/webElement/exercise.png"> <span class="text-yellow-100 ml-2 ">远动</span></a></li>
+                <li class="inline " style="left:1150px; width: 54px;"><a href="#"><img class="-m-1 -mt-2.5  h-16 w-16" src="assets/img/webElement/settings.png"> <span class="text-yellow-100 ml-2.5 ">设置</span></a></li>
+                <li class="inline " style="left:1190px; width: 54px;"><a href="about_us.html"><img class="-m-1 -mt-2   h-16 w-16" src="assets/img/webElement/logo.png"> <span class="text-yellow-100 ml-1 text-sm">关于我们</span></li>
+    
+            </ul>
+        </header>
+        
+        <!--搜索框-->
+        <div class="search-form mt-40 mb-24">
+            <form  method="get" action="sport.html" style="margin-left:20%;">
+                <input class="w-3/5 text-lg rounded-md p-2 px-4 bg-beige shadow h center" type="text" placeholder="TYPE YOUR SEARCH HERE...">
+                <button class=" p-2 px-5 bg-orange rounded-md" >搜索</button>
+            </form>
+        </div> 
+        <!--搜索框结束-->
+        <div class="text-center  mb-12"><span class=" heading" >运动推荐</span></div>
+        <div class="tuijian flex flex-wrap ml-40">
+            <div class="sport m-5 shadow h-32 w-1/4 rounded-md bg-green1 ">
+                <img class="w-full" src="assets/img/高尔夫.jpg">
+                <div class="text-green-700 p-2 text-xl">高尔夫球</div>
+                <p class="text-gray-600 px-1" style="font-weight: bold; font-size:14px;">每半小时消耗热量一百二十五卡</p>
+                <p class="p-3">它的锻炼效果来自时需要的长途跋涉和击球动作，
+                    如能持之以恒，对保持线条优美极为有利。</p>
+            </div>
+            <div class="sport m-5 shadow h-32 w-1/4 rounded-md bg-green1 ">
+                <img class="w-full" src="assets/img/健身操.jpg">
+                <div class="text-green-700 p-2 text-xl">健身操</div>
+                <p class="text-gray-600 px-1" style="font-weight: bold; font-size:14px;">每半小时消耗热量三百卡</p>
+                <p class="p-3">对肌肉、心肺、身体塑形十分有利。</p>
+            </div>
+            <div class="sport m-5 shadow h-32 w-1/4 rounded-md bg-green1 ">
+                <img class="w-full" src="assets/img/篮球.jpg">
+                <div class="text-green-700 p-2 text-xl">篮球</div>
+                <p class="text-gray-600 px-1" style="font-weight: bold; font-size:14px;">每半小时消耗热量二百五十卡</p>
+                <p class="p-3">它可增强灵活性，加强心肺功能。</p>
+            </div>
+            <div class="sport m-5 shadow h-32 w-1/4 rounded-md bg-green1 ">
+                <img class="w-full" src="assets/img/慢跑.jpg">
+                <div class="text-green-700 p-2 text-xl">慢跑</div>
+                <p class="text-gray-600 px-1" style="font-weight: bold; font-size:14px;">每半小时消耗热量三百卡</p>
+                <p class="p-3">有益于心肺和血液循环；跑的时间越长，消耗的热量越大。</p>
+            </div>
+            <div class="sport m-5 shadow h-32 w-1/4 rounded-md bg-green1 ">
+                <img  class="w-full" src="assets/img/乒乓球.jpg">
+                <div class="text-green-700 p-2 text-xl">乒乓球</div>
+                <p class="text-gray-600 px-1" style="font-weight: bold; font-size:14px;">每半小时消耗热量一百八十卡</p>
+                <p class="p-3">属全身运动，有益于心肺，可锻炼重心的移动和协调性。</p>
+            </div>
+            <div class="sport m-5 shadow h-32 w-1/4 rounded-md bg-green1 ">
+                <img class="w-full" src="assets/img/骑行.jpg">
+                <div class="text-green-700 p-2 text-xl">骑行</div>
+                <p class="text-gray-600 px-1" style="font-weight: bold; font-size:14px;">每半小时消耗热量三百三十卡</p>
+                <p class="p-3">对心肺、腿十分有利。</p>
+            </div>
+           
+        </div>
+    </body>
 </html>

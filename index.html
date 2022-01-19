@@ -40,23 +40,30 @@
 
     <header>
         <ul>
-            <li class="absolute m-1" style="left:5px;">
-                <a class="text-sm text-gray-800" href="index.html">
-                <img class="-m-1 -mt-2 ml-0 ml h-16 w-16" src="assets/img/webElement/home.png" style="top:-2px;">
-                      <span class="ml-2.5 "> 首页</span></a>
-                    </li>
-            <li class=" inline" style="left:1080px; width: 54px;">
-                <a class=" "><img class="-m-1 -mt-4 ml-0 ml h-16 w-16 " src="assets/img/webElement/diet.png">
-                    <span class="text-yellow-100 ml-2.5 "> 膳食</span></a></li>
-            <li class="inline " style="left:1120px; width: 54px;">
-                <a href="exercise.html">
-                    <img class="-m-1 -mt-4 ml-0 ml h-16 w-16""
-                        src="assets/img/webElement/exercise.png"> <span class="text-yellow-100 ml-2 ">远动</span></a></li>
-            <li class="inline " style="left:1150px; width: 54px;"><a><img class="-m-1 -mt-2.5  h-16 w-16" src="assets/img/webElement/settings.png"> <span class="text-yellow-100 ml-2.5 ">设置</span></a></li>
-            <li class="inline " style="left:1190px; width: 54px;"><a><img class="-m-1 -mt-2   h-16 w-16" src="assets/img/webElement/logo.png"> <span class="text-yellow-100 ml-1 text-sm">关于我们</span></li>
-
+           <li class="absolute m-1" style="left:5px;">
+              <a class="text-sm text-gray-800" href="index.html">
+                 <img class="-m-1 -mt-2 ml-0 ml h-16 w-16" src="assets/img/webElement/home.png" style="top:-2px;">
+                 <span class="ml-2.5 "> 首页</span></a>
+           </li>
+           <li class=" inline" style="left:1080px; width: 54px;">
+              <a class=" " href="food.html"><img class="-m-1 -mt-4 ml-0 ml h-16 w-16 "
+                    src="assets/img/webElement/diet.png">
+                 <span class="text-yellow-100 ml-2.5 "> 膳食</span></a>
+           </li>
+           <li class="inline " style="left:1120px; width: 54px;">
+              <a href="exercise.html">
+                 <img class="-m-1 -mt-4 ml-0 ml h-16 w-16""
+                              src=" assets/img/webElement/exercise.png"> <span
+                    class="text-yellow-100 ml-2 ">远动</span></a>
+           </li>
+           <li class="inline " style="left:1150px; width: 54px;"><a href="#"><img class="-m-1 -mt-2.5  h-16 w-16"
+                    src="assets/img/webElement/settings.png"> <span class="text-yellow-100 ml-2.5 ">设置</span></a></li>
+           <li class="inline " style="left:1190px; width: 54px;"><a href="about_us.html"><img
+                    class="-m-1 -mt-2   h-16 w-16" src="assets/img/webElement/logo.png"> <span
+                    class="text-yellow-100 ml-1 text-sm">关于我们</span></li>
+  
         </ul>
-    </header>
+     </header>
 
     <div id="app" class="flex mx-36 my-12 flex-wrap">
 
@@ -315,13 +322,14 @@
             <div style="width:600px;">
                 <canvas id="emoChart" class="bg-white ml-20 mt-10 m-5 p-5" width="510" height="300"></canvas>
                 <script>
+                    const bar_labels = ['兴奋', '开心', '马马虎虎', '难过', '疲惫',];
                     const emo = document.getElementById('emoChart');
                     const emoChart = new Chart(emo, {
                         type: 'bar',
                         data: {
-                            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                            labels: ['兴奋', '开心', '马马虎虎', '难过', '疲惫',],
                             datasets: [{
-                                label: '过往日志心情统计',
+                               label:'心情统计',
                                 data: [12, 15, 3, 5, 7],
                                 backgroundColor: [
                                     'rgba(62,142,126)',
