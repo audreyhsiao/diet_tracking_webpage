@@ -1,4 +1,4 @@
-# diet_tracking_webpage
+<img width="1512" alt="image" src="https://github.com/audreyhsiao/diet_tracking_webpage/assets/51323445/22e3a273-d972-434a-b150-d5436b51d21a"># diet_tracking_webpage
 A web app that accompanys you through the boring diet and track your progress.
 
 ## Website design
@@ -16,8 +16,11 @@ A web app that accompanys you through the boring diet and track your progress.
 ### Login Page
 <img width="843" alt="image" src="https://github.com/audreyhsiao/diet_tracking_webpage/assets/51323445/99504e23-42ef-46fe-a29c-d649fb8e1c15">
 
+### Searching within the website
+<img width="1512" alt="image" src="https://github.com/audreyhsiao/diet_tracking_webpage/assets/51323445/59101280-03a0-4076-b50f-348001f22c2d">
+
 ### Home Page
-<img width="936" alt="image" src="https://github.com/audreyhsiao/diet_tracking_webpage/assets/51323445/eef1b168-1d40-472b-8faf-31cdfd7ba970">
+<img width="1512" alt="image" src="https://github.com/audreyhsiao/diet_tracking_webpage/assets/51323445/85172d57-9e59-42c5-843d-2231be226b70">
 
 
 ### Recipe Recommendation
