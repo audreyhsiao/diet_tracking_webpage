@@ -1,4 +1,4 @@
-<img width="1512" alt="image" src="https://github.com/audreyhsiao/diet_tracking_webpage/assets/51323445/22e3a273-d972-434a-b150-d5436b51d21a"># diet_tracking_webpage
+# diet_tracking_webpage
 A web app that accompanys you through the boring diet and track your progress.
 
 ## Website design
